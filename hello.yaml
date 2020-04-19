@@ -1,0 +1,14 @@
+metadata:
+  name: awesome-octopus
+  namespace: default
+spec:
+  entrypoint: whalesay
+  templates:
+    - name: whalesay
+      container:
+        name: main
+        image: 'docker/whalesay:latest'
+        command:
+          - cowsay
+        args:
+          - hello world
